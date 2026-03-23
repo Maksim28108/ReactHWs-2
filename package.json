@@ -1,7 +1,9 @@
 {
-  "name": "reacthws-try-2",
+  "name": "react-homeworks2",
   "private": true,
   "version": "0.0.0",
+  "description": "React homework assignments",
+  "author": "Maksim Bilukha",
   "type": "module",
   "scripts": {
     "dev": "vite",

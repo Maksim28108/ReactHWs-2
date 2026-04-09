@@ -2,19 +2,13 @@ import { Component } from "react";
 
 export default class ArbitraryList extends Component{
   render(){
+    const items = ['Item1', 'Item2', 'item3', 'item4', 'item5', 'item6', 'item7', 'item8', 'item9', 'item10']
     return(
       <>
         <ul>
-          <li>Item#1</li>
-          <li>Item#2</li>
-          <li>Item#3</li>
-          <li>Item#4</li>
-          <li>Item#5</li>
-          <li>Item#6</li>
-          <li>Item#7</li>
-          <li>Item#8</li>
-          <li>Item#9</li>
-          <li>Item#10</li>
+          {items.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </>
     )

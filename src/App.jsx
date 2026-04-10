@@ -1,5 +1,15 @@
-import ArbitraryList from "./components/ArbitraryList";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Footer from "./components/Footer/Footer";
+
 
 export default function App() {
-  return <ArbitraryList/>
+  return(
+    <>
+      <Header/>
+      <Hero/>
+      <Footer />
+    </>
+  ) 
 }
+

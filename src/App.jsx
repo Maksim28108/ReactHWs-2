@@ -1,15 +1,9 @@
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Footer from "./components/Footer/Footer";
-
+import MenuPage from "./pages/MenuPage";
 
 export default function App() {
-  return(
+  return (
     <>
-      <Header/>
-      <Hero/>
-      <Footer />
+      <MenuPage />
     </>
-  ) 
+  );
 }
-

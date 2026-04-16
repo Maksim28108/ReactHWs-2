@@ -1,0 +1,129 @@
+.cardText {
+  max-width: 350px;
+  color: #546285;
+}
+
+.mealName {
+  font-weight: 400;
+}
+
+.card {
+  width: 580px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardBottom {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 1200px;
+}
+
+.menuTitle {
+  color: #35b8be;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.menuText {
+  color: #546285;
+  max-width: 450px;
+}
+
+.menuSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../assets/menubackground.png");
+}
+
+.menuTitle {
+  text-align: center;
+}
+
+.menuText {
+  text-align: center;
+}
+
+.menuButtons {
+  display: flex;
+  gap: 16px;
+  margin: 30px 0 40px 0;
+}
+
+.seeMore {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin-top: 45px;
+}
+
+.seeMoreBtn {
+  width: 147px;
+  height: 52px;
+  color: white;
+  cursor: pointer;
+}
+
+.cardInput {
+  width: 60px;
+  height: 45px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+}
+
+.cardButton {
+  width: 147px;
+  height: 45px;
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.activeBtn {
+  width: 147px;
+  height: 52px;
+  background-color: #35b8be;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.inactiveBtn {
+  width: 147px;
+  height: 52px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+}

@@ -4,8 +4,8 @@ import MenuLoad from "./MenuApi";
 import styles from "./MenuSection.module.css";
 
 export default function Menu({ addToCart }) {
-  const buttons = ["Desert", "Dinner", "Breakfast"];
-  const [active, setActive] = useState("Desert");
+  const buttons = ["Dessert", "Dinner", "Breakfast"];
+  const [active, setActive] = useState("Dessert");
   return (
     <>
       <div className={styles.menuSection}>
@@ -21,12 +21,11 @@ export default function Menu({ addToCart }) {
               key={btn}
               className={active === btn ? styles.activeBtn : styles.inactiveBtn}
               onClick={() => setActive(btn)}
-              disabled={btn !== "Desert"}
               children={btn}
             />
           ))}
         </div>
-        <MenuLoad addToCart={addToCart} />
+        <MenuLoad addToCart={addToCart} category={active} />
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-footer{
+.Footer {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -27,7 +27,6 @@ footer{
 
 .ListTitles {
     display: flex;
-    gap: 80px;
     list-style: none;
     gap: 120px;
 }
@@ -38,6 +37,7 @@ footer{
     list-style: none;
     gap: 16px;
     margin-top: 16px;
+    color: #546285;
 }
 
 .FooterIcons {
@@ -60,10 +60,6 @@ footer{
     max-width: 250px;
 }
 
-.ListLinks{
-    color: #546285;
-}
-
-span{
+.Accent {
     color: #35B8BE;
 }

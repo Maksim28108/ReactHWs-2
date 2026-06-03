@@ -11,25 +11,27 @@ const links = [
 
 export default function Header() {
     return (
-        <header>
+        <header className={styles.Header}>
 
-            <img src={Logo} alt="" className={styles.LogoPic}/>
+            <img src={Logo} alt="Logo" className={styles.LogoPic}/>
 
-            <div className={styles.HeaderLinks}>   
+            <div className={styles.HeaderLinks}>
                 <nav>
-                    <ul>
+                    <ul className={styles.NavList}>
                         {links.map(link => (
-                            <li key={link.id}>{link.label}</li>
+                            <li key={link.id}>
+                                <a href={link.href}>{link.label}</a>
+                            </li>
                         ))}
                     </ul>
                 </nav>
             </div>
 
             <div>
-                <button>
-                    <img src={Cart} alt="" className={styles.CartPic}/>  
+                <button className={styles.CartButton} aria-label="Cart">
+                    <img src={Cart} alt="" className={styles.CartPic}/>
                 </button>
-            </div>    
+            </div>
 
         </header>
     )

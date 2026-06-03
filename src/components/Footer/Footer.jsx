@@ -22,10 +22,10 @@ const columns = [
 
 export default function Footer(){
     return(
-        <footer>
-            <div className={styles.FooterTop}>   
+        <footer className={styles.Footer}>
+            <div className={styles.FooterTop}>
                 <div>
-                    <img src={Logo} className={styles.FooterLogo} />
+                    <img src={Logo} alt="Logo" className={styles.FooterLogo} />
                     <p className={styles.FooterLogoText}>Takeaway & Delivery template for small - medium businesses.</p>
                 </div>
                 <div>
@@ -35,8 +35,8 @@ export default function Footer(){
                                 <li key={index}>
                                     <p>{column.title}</p>
                                     <ul className={styles.ListLinks}>
-                                        {column.links.map((link, i) => 
-                                            <li key={i} >{link}</li>
+                                        {column.links.map((link, i) =>
+                                            <li key={i}><a href="#">{link}</a></li>
                                         )}
                                     </ul>
                                 </li>
@@ -47,7 +47,7 @@ export default function Footer(){
             </div>
             <hr className={styles.Divider} />
             <div className={styles.FooterBottom}>
-                <p>Built by <span>Flowbase</span>· Powered by <span>Webflow</span></p>                
+                <p>Built by <span className={styles.Accent}>Flowbase</span>· Powered by <span className={styles.Accent}>Webflow</span></p>
                 <div className={styles.FooterIcons}>
                     <a href="https://instagram.com" target="_blank" rel="noreferrer">
                         <img src={Inst} alt="Instagram" />

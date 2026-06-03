@@ -21,13 +21,13 @@ export default function Hero(){
                 </Button>
 
                 <div className={styles.TrustpilotDiv}>
-                    <img src={Trustpilot} alt="" />
+                    <img src={Trustpilot} alt="Trustpilot rating" />
                     <p><span className={styles.TrustpilotTextAccent}>4.8 out of 5</span> based on 2000+ reviews</p>
                 </div>
             </div>
 
             <div className={styles.HeroImageDiv}>
-                <img src={Heroimage} alt="" className={styles.HeroImage}/>
+                <img src={Heroimage} alt="Hero food" className={styles.HeroImage}/>
             </div>
         
         </div>

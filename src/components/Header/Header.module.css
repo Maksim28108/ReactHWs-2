@@ -1,10 +1,10 @@
-header {
+.Header {
     display: flex;
     align-items: center;
     padding: 20px 120px;
 }
 
-ul{
+.NavList {
     list-style: none;
     display: flex;
     gap: 32px;
@@ -15,9 +15,8 @@ ul{
   height: 51px;
 }
 
-
-button{
-    width: 55px;  
+.CartButton {
+    width: 55px;
     height: 55px;
     padding: 0;
     border: none;

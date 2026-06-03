@@ -1,0 +1,97 @@
+.Page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.BackImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.Title {
+    color: #35B8BE;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.Form {
+    background: #fff;
+    padding: 40px 48px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 420px;
+    position: relative;
+    z-index: 1;
+}
+
+.Field {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.Label {
+    width: 100px;
+    color: #333;
+    font-size: 15px;
+}
+
+.Input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+}
+
+.Input:focus {
+    border-color: #35B8BE;
+}
+
+.Buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.SubmitBtn {
+    padding: 10px 28px;
+    background-color: #35B8BE;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.CancelBtn {
+    padding: 10px 28px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.Error {
+    color: red;
+    font-size: 14px;
+}

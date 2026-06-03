@@ -11,21 +11,23 @@ const links = [
 
 export default function Header({ count }) {
   return (
-    <header>
-      <img src={Logo} alt="" className={styles.LogoPic} />
+    <header className={styles.Header}>
+      <img src={Logo} alt="Logo" className={styles.LogoPic} />
 
       <div className={styles.HeaderLinks}>
         <nav>
-          <ul>
+          <ul className={styles.NavList}>
             {links.map((link) => (
-              <li key={link.id}>{link.label}</li>
+              <li key={link.id}>
+                <a href={link.href}>{link.label}</a>
+              </li>
             ))}
           </ul>
         </nav>
       </div>
 
       <div className={styles.cartWrapper}>
-        <button>
+        <button className={styles.CartButton} aria-label="Cart">
           <img src={Cart} alt="" className={styles.CartPic} />
         </button>
         <span className={styles.cartCount}>{count}</span>

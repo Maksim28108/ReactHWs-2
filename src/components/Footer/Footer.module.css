@@ -1,0 +1,65 @@
+.Footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
+    background-image: url('../../assets/FooterPics/BackgroundFooter.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.FooterTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 120px 100px 120px;
+    width: 100%;
+}
+
+.FooterBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 120px 60px 120px;
+    width: 100%;
+}
+
+.ListTitles {
+    display: flex;
+    list-style: none;
+    gap: 120px;
+}
+
+.ListLinks {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 16px;
+    margin-top: 16px;
+    color: #546285;
+}
+
+.FooterIcons {
+    display: flex;
+    gap: 16px;
+}
+
+.Divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 0 120px;
+}
+
+.FooterLogo{
+    margin-bottom: 25px;
+}
+
+.FooterLogoText{
+    color: #546285;
+    max-width: 250px;
+}
+
+.Accent {
+    color: #35B8BE;
+}

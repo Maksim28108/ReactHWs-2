@@ -1,0 +1,45 @@
+.HeroDiv {
+    display: flex;
+    align-items: center;
+    padding: 100px 120px 140px 320px;
+    box-sizing: border-box;
+    width: 100%;
+    background-image: url('../../assets/HeroPics/BackgroundImage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.HeroTitle{
+    font-size: 60px;
+    max-width: 600px;
+    font-weight: 400;
+    margin-bottom: 27px;
+}
+
+.HeroTitleAccent{
+    color: #35B8BE;
+}
+
+.HeroText{
+    font-size: 18px;
+    max-width: 500px;
+    color: #546285;
+    margin-bottom: 57px;
+}
+
+.TrustpilotTextAccent{
+    color: #35B8BE;
+}
+
+.HeroImageDiv {
+    width: 600px;
+    height: 580px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.TrustpilotDiv{
+    margin-top: 30px;
+}

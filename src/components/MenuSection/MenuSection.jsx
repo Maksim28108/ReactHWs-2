@@ -3,9 +3,10 @@ import Button from "../Button/Button";
 import MenuLoad from "./MenuApi";
 import styles from "./MenuSection.module.css";
 
+const buttons = ["Dessert", "Dinner", "Breakfast"];
+
 export default function Menu({ addToCart }) {
-  const buttons = ["Desert", "Dinner", "Breakfast"];
-  const [active, setActive] = useState("Desert");
+  const [active, setActive] = useState("Dessert");
   return (
     <>
       <div className={styles.menuSection}>
@@ -21,13 +22,11 @@ export default function Menu({ addToCart }) {
               key={btn}
               className={active === btn ? styles.activeBtn : styles.inactiveBtn}
               onClick={() => setActive(btn)}
-              disabled={btn !== "Desert"}
-            >
-              {btn}
-            </Button>
+              children={btn}
+            />
           ))}
         </div>
-        <MenuLoad addToCart={addToCart} />
+        <MenuLoad addToCart={addToCart} category={active} />
       </div>
     </>
   );

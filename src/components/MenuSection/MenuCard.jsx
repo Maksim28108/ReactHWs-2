@@ -1,9 +1,17 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../store/cartSlice";
 import Button from "../Button/Button";
 import styles from "./MenuSection.module.css";
 
-export default function MenuCard({ img, meal, price, addToCart }) {
+export default function MenuCard({ id, img, meal, price }) {
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addToCart({ id, img, meal, price, quantity }));
+  };
+
   return (
     <div className={styles.card}>
       <img src={img} alt={meal} width={120} height={120} />
@@ -20,14 +28,13 @@ export default function MenuCard({ img, meal, price, addToCart }) {
           <input
             type="number"
             min={1}
+            value={quantity}
             onChange={(e) => setQuantity(Number(e.target.value))}
             className={styles.cardInput}
           />
-          <Button
-            children={"Add to cart"}
-            className={styles.cardButton}
-            onClick={() => addToCart(quantity)}
-          />
+          <Button className={styles.cardButton} onClick={handleAddToCart}>
+            Add to cart
+          </Button>
         </div>
       </div>
     </div>

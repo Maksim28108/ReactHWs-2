@@ -3,8 +3,9 @@ import Button from "../Button/Button";
 import MenuLoad from "./MenuApi";
 import styles from "./MenuSection.module.css";
 
-export default function Menu({ addToCart }) {
-  const buttons = ["Dessert", "Dinner", "Breakfast"];
+const buttons = ["Dessert", "Dinner", "Breakfast"];
+
+export default function Menu() {
   const [active, setActive] = useState("Dessert");
   return (
     <>
@@ -14,18 +15,18 @@ export default function Menu({ addToCart }) {
           Use our menu to place an order online, or <span>phone</span> our store
           to place a pickup order. Fast and fresh food.
         </p>
-
         <div className={styles.menuButtons}>
           {buttons.map((btn) => (
             <Button
               key={btn}
               className={active === btn ? styles.activeBtn : styles.inactiveBtn}
               onClick={() => setActive(btn)}
-              children={btn}
-            />
+            >
+              {btn}
+            </Button>
           ))}
         </div>
-        <MenuLoad addToCart={addToCart} category={active} />
+        <MenuLoad category={active} />
       </div>
     </>
   );

@@ -1,20 +1,23 @@
 import { useState, useEffect } from "react";
 import MenuCard from "./MenuCard";
 import Button from "../Button/Button";
-import useFetch from "../../hooks/useFetch";
 import styles from "./MenuSection.module.css";
 
-export default function MenuLoad({ addToCart, category }) {
-  const { data: meals } = useFetch(
-    "https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals"
-  );
+export default function MenuLoad({ category }) {
+  const [meals, setMeals] = useState([]);
   const [visible, setVisible] = useState(6);
+
+  useEffect(() => {
+    fetch("https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals")
+      .then((res) => res.json())
+      .then((data) => setMeals(data));
+  }, []);
 
   useEffect(() => {
     setVisible(6);
   }, [category]);
 
-  const filtered = (meals || []).filter((m) => m.category === category);
+  const filtered = meals.filter((m) => m.category === category);
 
   return (
     <div>
@@ -22,21 +25,21 @@ export default function MenuLoad({ addToCart, category }) {
         {filtered.slice(0, visible).map((meal) => (
           <MenuCard
             key={meal.id}
+            id={meal.id}
             img={meal.img}
             meal={meal.meal}
             price={meal.price}
-            addToCart={addToCart}
           />
         ))}
       </div>
-
       <div className={styles.seeMore}>
         {visible < filtered.length ? (
           <Button
             className={styles.seeMoreBtn}
             onClick={() => setVisible((current) => current + 6)}
-            children={"See more"}
-          />
+          >
+            See more
+          </Button>
         ) : (
           <p>No more items</p>
         )}

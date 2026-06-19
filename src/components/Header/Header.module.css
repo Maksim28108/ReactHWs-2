@@ -4,10 +4,15 @@ header {
   padding: 20px 120px;
 }
 
-ul {
+.navList {
   list-style: none;
   display: flex;
   gap: 32px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: inherit;
 }
 
 .LogoPic {
@@ -15,7 +20,18 @@ ul {
   height: 51px;
 }
 
-button {
+.loginBtn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #35b8be;
+  color: white;
+  cursor: pointer;
+  margin-right: 16px;
+  font-size: 14px;
+}
+
+.cartButton {
   width: 55px;
   height: 55px;
   padding: 0;
@@ -23,6 +39,7 @@ button {
   border-radius: 5px;
   line-height: 0;
   background-color: #35b8be;
+  cursor: pointer;
 }
 
 .HeaderLinks {
@@ -33,6 +50,7 @@ button {
 .cartWrapper {
   position: relative;
   display: inline-block;
+  text-decoration: none;
 }
 
 .cartCount {
@@ -48,4 +66,5 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: black;
 }

@@ -31,8 +31,9 @@ export default function MenuLoad({ addToCart }) {
           <Button
             className={styles.seeMoreBtn}
             onClick={() => setVisible((current) => current + 6)}
-            children={"See more"}
-          />
+          >
+            See more
+          </Button>
         ) : (
           <p>No more items</p>
         )}

@@ -22,8 +22,9 @@ export default function Menu({ addToCart }) {
               className={active === btn ? styles.activeBtn : styles.inactiveBtn}
               onClick={() => setActive(btn)}
               disabled={btn !== "Desert"}
-              children={btn}
-            />
+            >
+              {btn}
+            </Button>
           ))}
         </div>
         <MenuLoad addToCart={addToCart} />

@@ -19,7 +19,7 @@ export default function Hero() {
           since the 1500.
         </p>
 
-        <Button children={"Place an Order"} />
+        <Button>Place an Order</Button>
 
         <div className={styles.TrustpilotDiv}>
           <img src={Trustpilot} alt="" />

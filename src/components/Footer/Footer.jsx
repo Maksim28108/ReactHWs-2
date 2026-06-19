@@ -47,7 +47,7 @@ export default function Footer() {
                         {typeof link === "string" ? (
                           link
                         ) : (
-                          <a href={link.href} target="_blank" rel="noreferrer">
+                          <a href={link.href} target="_blank" rel="noreferrer" className={styles.footerLink}>
                             {link.label}
                           </a>
                         )}
@@ -63,16 +63,16 @@ export default function Footer() {
       <hr className={styles.Divider} />
       <div className={styles.FooterBottom}>
         <p>
-          Built by <span>Flowbase</span>· Powered by <span>Webflow</span>
+          Built by <span className={styles.footerAccent}>Flowbase</span>· Powered by <span className={styles.footerAccent}>Webflow</span>
         </p>
         <div className={styles.FooterIcons}>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" className={styles.footerLink}>
             <img src={Inst} alt="Instagram" />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer">
+          <a href="https://twitter.com" target="_blank" rel="noreferrer" className={styles.footerLink}>
             <img src={Twitter} alt="Twitter" />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noreferrer">
+          <a href="https://youtube.com" target="_blank" rel="noreferrer" className={styles.footerLink}>
             <img src={Youtube} alt="Youtube" />
           </a>
         </div>

@@ -4,7 +4,7 @@ header {
   padding: 20px 120px;
 }
 
-ul {
+.navList {
   list-style: none;
   display: flex;
   gap: 32px;
@@ -15,7 +15,7 @@ ul {
   height: 51px;
 }
 
-button {
+.cartButton {
   width: 55px;
   height: 55px;
   padding: 0;

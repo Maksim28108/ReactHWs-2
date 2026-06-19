@@ -16,7 +16,7 @@ export default function Header({ count }) {
 
       <div className={styles.HeaderLinks}>
         <nav>
-          <ul>
+          <ul className={styles.navList}>
             {links.map((link) => (
               <li key={link.id}>{link.label}</li>
             ))}
@@ -25,7 +25,7 @@ export default function Header({ count }) {
       </div>
 
       <div className={styles.cartWrapper}>
-        <button>
+        <button className={styles.cartButton}>
           <img src={Cart} alt="" className={styles.CartPic} />
         </button>
         <span className={styles.cartCount}>{count}</span>

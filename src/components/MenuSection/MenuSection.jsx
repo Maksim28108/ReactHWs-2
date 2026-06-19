@@ -3,8 +3,9 @@ import Button from "../Button/Button";
 import MenuLoad from "./MenuApi";
 import styles from "./MenuSection.module.css";
 
+const buttons = ["Dessert", "Dinner", "Breakfast"];
+
 export default function Menu({ addToCart }) {
-  const buttons = ["Dessert", "Dinner", "Breakfast"];
   const [active, setActive] = useState("Dessert");
   return (
     <>

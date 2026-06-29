@@ -1,20 +1,16 @@
 import { useState, useEffect } from "react";
 import MenuCard from "./MenuCard";
 import Button from "../Button/Button";
-import useFetch from "../../hooks/useFetch";
 import styles from "./MenuSection.module.css";
 
-export default function MenuLoad({ addToCart, category }) {
-  const { data: meals } = useFetch(
-    "https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals"
-  );
+export default function MenuLoad({ addToCart }) {
+  const [meals, setMeals] = useState([]);
   const [visible, setVisible] = useState(6);
-
   useEffect(() => {
-    setVisible(6);
-  }, [category]);
-
-  const filtered = (meals || []).filter((m) => m.category === category);
+    fetch("https://65de35f3dccfcd562f5691bb.mockapi.io/api/v1/meals")
+      .then((res) => res.json())
+      .then((data) => setMeals(data));
+  }, []);
 
   return (
     <div>

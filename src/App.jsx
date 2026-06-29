@@ -1,37 +1,22 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Footer from "./components/Footer/Footer";
-import Login from "./components/Login/Login";
-import Order from "./components/Order/Order";
-import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-
-function HomePage() {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <Footer />
-    </>
-  );
-}
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import MenuPage from "./pages/MenuPage";
+import OrderPage from "./pages/OrderPage";
+import PrivateRoute from "./components/PrivateRoute";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
-        <Route
-          path="/order"
-          element={
-            <ProtectedRoute>
-              <Order />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/menu" element={<MenuPage />} />
+      <Route
+        path="/order"
+        element={
+          <PrivateRoute>
+            <OrderPage />
+          </PrivateRoute>
+        }
+      />
+    </Routes>
   );
 }

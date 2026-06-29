@@ -64,6 +64,13 @@
   background-image: url("../../assets/menubackground.png");
 }
 
+.menuTitle {
+  text-align: center;
+}
+
+.menuText {
+  text-align: center;
+}
 
 .menuButtons {
   display: flex;

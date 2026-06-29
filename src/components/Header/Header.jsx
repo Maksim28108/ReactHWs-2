@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import Logo from "../../assets/HeaderPics/Logo.png";
 import Cart from "../../assets/HeaderPics/Group.svg";
 import styles from "./Header.module.css";
 
 const links = [
-  { id: 1, label: "Home", href: "#" },
-  { id: 2, label: "Menu", href: "#" },
-  { id: 3, label: "Company", href: "#" },
-  { id: 4, label: "Login", href: "#" },
+  { id: 1, label: "Home", to: "/" },
+  { id: 2, label: "Menu", to: "/menu" },
+  { id: 3, label: "Company", to: "/company" },
+  { id: 4, label: "Login", to: "/login" },
 ];
 
 export default function Header({ count }) {
@@ -19,7 +20,7 @@ export default function Header({ count }) {
           <ul className={styles.NavList}>
             {links.map((link) => (
               <li key={link.id}>
-                <a href={link.href}>{link.label}</a>
+                <Link to={link.to}>{link.label}</Link>
               </li>
             ))}
           </ul>

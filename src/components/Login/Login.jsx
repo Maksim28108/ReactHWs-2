@@ -38,8 +38,9 @@ export default function Login() {
             <h1 className={styles.Title}>Log in</h1>
             <form className={styles.Form} onSubmit={handleSubmit}>
                 <div className={styles.Field}>
-                    <label className={styles.Label}>User name</label>
+                    <label htmlFor="email" className={styles.Label}>User name</label>
                     <input
+                        id="email"
                         className={styles.Input}
                         type="email"
                         placeholder="UserName"
@@ -49,8 +50,9 @@ export default function Login() {
                     />
                 </div>
                 <div className={styles.Field}>
-                    <label className={styles.Label}>Password</label>
+                    <label htmlFor="password" className={styles.Label}>Password</label>
                     <input
+                        id="password"
                         className={styles.Input}
                         type="password"
                         value={password}

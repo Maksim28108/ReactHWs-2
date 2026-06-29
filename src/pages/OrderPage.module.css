@@ -10,7 +10,7 @@
 .title {
   font-size: 36px;
   font-weight: 400;
-  color: #35b8be;
+  color: var(--color-accent);
   margin-bottom: 40px;
   text-align: center;
 }
@@ -25,7 +25,7 @@
 
 .empty {
   text-align: center;
-  color: #546285;
+  color: var(--text-secondary);
   font-size: 18px;
 }
 
@@ -34,9 +34,10 @@
   align-items: center;
   gap: 20px;
   padding: 16px 24px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background-color: white;
+  background-color: var(--bg-card);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .itemImg {
@@ -49,10 +50,11 @@
 .itemName {
   flex: 1;
   font-size: 16px;
+  color: var(--text-primary);
 }
 
 .itemPrice {
-  color: #35b8be;
+  color: var(--color-accent);
   font-weight: 500;
   white-space: nowrap;
 }
@@ -62,22 +64,28 @@
   height: 40px;
   text-align: center;
   border-radius: 5px;
-  border: 1px solid #ddd;
-  background-color: #fafafa;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-input);
+  color: var(--text-primary);
   outline: none;
   font-size: 14px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .removeBtn {
   width: 40px;
   height: 40px;
-  background-color: #35b8be;
+  background-color: var(--color-accent);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
+}
+
+.removeBtn:hover {
+  background-color: var(--color-accent-hover);
 }
 
 .form {
@@ -99,28 +107,35 @@
 .label {
   width: 60px;
   text-align: right;
-  color: #333;
+  color: var(--text-primary);
   font-size: 16px;
 }
 
 .input {
   width: 280px;
   height: 42px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   padding: 0 12px;
   font-size: 14px;
   outline: none;
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .orderBtn {
   margin-top: 8px;
   width: 140px;
   height: 48px;
-  background-color: #35b8be;
+  background-color: var(--color-accent);
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.orderBtn:hover {
+  background-color: var(--color-accent-hover);
 }

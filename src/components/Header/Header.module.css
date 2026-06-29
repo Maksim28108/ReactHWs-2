@@ -1,7 +1,9 @@
-header {
+.header {
   display: flex;
   align-items: center;
   padding: 20px 120px;
+  background-color: var(--bg-header);
+  transition: background-color 0.2s ease;
 }
 
 .navList {
@@ -12,7 +14,11 @@ header {
 
 .navLink {
   text-decoration: none;
-  color: inherit;
+  color: var(--text-primary);
+}
+
+.navLink:hover {
+  color: var(--color-accent);
 }
 
 .LogoPic {
@@ -20,15 +26,36 @@ header {
   height: 51px;
 }
 
+.themeToggle {
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  margin-right: 12px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.themeToggle:hover {
+  border-color: var(--color-accent);
+}
+
 .loginBtn {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #35b8be;
+  background-color: var(--color-accent);
   color: white;
   cursor: pointer;
   margin-right: 16px;
   font-size: 14px;
+}
+
+.loginBtn:hover {
+  background-color: var(--color-accent-hover);
 }
 
 .cartButton {
@@ -38,8 +65,12 @@ header {
   border: none;
   border-radius: 5px;
   line-height: 0;
-  background-color: #35b8be;
+  background-color: var(--color-accent);
   cursor: pointer;
+}
+
+.cartButton:hover {
+  background-color: var(--color-accent-hover);
 }
 
 .HeaderLinks {
@@ -57,8 +88,8 @@ header {
   position: absolute;
   top: -6px;
   right: -6px;
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 50%;
   width: 18px;
   height: 18px;
@@ -66,5 +97,5 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  color: var(--text-primary);
 }

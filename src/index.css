@@ -1,7 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Light theme (default) ─────────────────────────────────── */
+:root,
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-input: #fafafa;
+  --bg-header: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #546285;
+  --border-color: #e0e0e0;
+  --color-accent: #35b8be;
+  --color-accent-hover: #2aa0a6;
+  --divider-color: #e0e0e0;
+}
+
+/* ── Dark theme ─────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg-primary: #121212;
+  --bg-card: #1e1e1e;
+  --bg-input: #2a2a2a;
+  --bg-header: #1a1a1a;
+  --text-primary: #f0f0f0;
+  --text-secondary: #8a9bc0;
+  --border-color: #3a3a3c;
+  --color-accent: #35b8be;
+  --color-accent-hover: #44cdd4;
+  --divider-color: #3a3a3c;
+}
+
 * {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Dark overlay for sections with fixed background images */
+[data-theme="dark"] footer {
+  background-color: rgba(0, 0, 0, 0.80);
+  background-blend-mode: multiply;
 }

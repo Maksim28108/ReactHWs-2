@@ -1,10 +1,11 @@
 .cardText {
   max-width: 350px;
-  color: #546285;
+  color: var(--text-secondary);
 }
 
 .mealName {
   font-weight: 400;
+  color: var(--text-primary);
 }
 
 .card {
@@ -14,9 +15,10 @@
   flex-direction: row;
   gap: 16px;
   padding: 16px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background-color: white;
+  background-color: var(--bg-card);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .cardBody {
@@ -45,14 +47,16 @@
 }
 
 .menuTitle {
-  color: #35b8be;
+  color: var(--color-accent);
   font-size: 50px;
   font-weight: 400;
+  text-align: center;
 }
 
 .menuText {
-  color: #546285;
+  color: var(--text-secondary);
   max-width: 450px;
+  text-align: center;
 }
 
 .menuSection {
@@ -60,14 +64,15 @@
   flex-direction: column;
   align-items: center;
   background-image: url("../../assets/menubackground.png");
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
 }
 
-.menuTitle {
-  text-align: center;
-}
-
-.menuText {
-  text-align: center;
+:global([data-theme="dark"]) .menuSection {
+  background-color: rgba(0, 0, 0, 0.82);
+  background-blend-mode: multiply;
 }
 
 .menuButtons {
@@ -95,11 +100,13 @@
   height: 45px;
   text-align: center;
   border-radius: 5px;
-  background-color: #fafafa;
-  border: 1px solid #ddd;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
   outline: none;
   box-shadow: none;
   appearance: none;
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .cardButton {
@@ -114,7 +121,7 @@
 .activeBtn {
   width: 147px;
   height: 52px;
-  background-color: #35b8be;
+  background-color: var(--color-accent);
   color: white;
   border: none;
   cursor: pointer;
@@ -123,7 +130,8 @@
 .inactiveBtn {
   width: 147px;
   height: 52px;
-  background-color: white;
-  color: black;
-  border: 1px solid #ddd;
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
 }

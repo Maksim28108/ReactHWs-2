@@ -27,9 +27,8 @@ footer {
 
 .ListTitles {
   display: flex;
-  gap: 80px;
-  list-style: none;
   gap: 120px;
+  list-style: none;
 }
 
 .ListLinks {
@@ -38,6 +37,7 @@ footer {
   list-style: none;
   gap: 16px;
   margin-top: 16px;
+  color: var(--text-secondary);
 }
 
 .FooterIcons {
@@ -47,7 +47,7 @@ footer {
 
 .Divider {
   border: none;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--divider-color);
   margin: 0 120px;
 }
 
@@ -56,19 +56,19 @@ footer {
 }
 
 .FooterLogoText {
-  color: #546285;
+  color: var(--text-secondary);
   max-width: 250px;
 }
 
-.ListLinks {
-  color: #546285;
+.footerAccent {
+  color: var(--color-accent);
 }
 
-span {
-  color: #35b8be;
-}
-
-a {
+.footerLink {
   text-decoration: none;
-  color: #546285;
+  color: var(--text-secondary);
+}
+
+.footerLink:hover {
+  color: var(--color-accent);
 }

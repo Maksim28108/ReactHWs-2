@@ -8,29 +8,36 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: transparent;
+    transition: background-color 0.2s ease;
 }
 
+:global([data-theme="dark"]) .HeroDiv {
+    background-image: none;
+    background-color: #1e1e1e;
+}
 
-.HeroTitle{
+.HeroTitle {
     font-size: 60px;
     max-width: 600px;
     font-weight: 400;
     margin-bottom: 27px;
+    color: var(--text-primary);
 }
 
-.HeroTitleAccent{
-    color: #35B8BE;
+.HeroTitleAccent {
+    color: var(--color-accent);
 }
 
-.HeroText{
+.HeroText {
     font-size: 18px;
     max-width: 500px;
-    color: #546285;
+    color: var(--text-secondary);
     margin-bottom: 57px;
 }
 
-.TrustpilotTextAccent{
-    color: #35B8BE;
+.TrustpilotTextAccent {
+    color: var(--color-accent);
 }
 
 .HeroImageDiv {
@@ -40,6 +47,6 @@
     overflow: hidden;
 }
 
-.TrustpilotDiv{
+.TrustpilotDiv {
     margin-top: 30px;
 }

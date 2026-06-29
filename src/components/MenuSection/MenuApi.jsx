@@ -15,7 +15,7 @@ export default function MenuLoad({ addToCart }) {
   return (
     <div>
       <div className={styles.grid}>
-        {meals.slice(0, visible).map((meal) => (
+        {filtered.slice(0, visible).map((meal) => (
           <MenuCard
             key={meal.id}
             img={meal.img}
@@ -27,7 +27,7 @@ export default function MenuLoad({ addToCart }) {
       </div>
 
       <div className={styles.seeMore}>
-        {visible < meals.length ? (
+        {visible < filtered.length ? (
           <Button
             className={styles.seeMoreBtn}
             onClick={() => setVisible((current) => current + 6)}

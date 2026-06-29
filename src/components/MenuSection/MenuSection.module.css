@@ -48,11 +48,13 @@
   color: #35b8be;
   font-size: 50px;
   font-weight: 400;
+  text-align: center;
 }
 
 .menuText {
   color: #546285;
   max-width: 450px;
+  text-align: center;
 }
 
 .menuSection {

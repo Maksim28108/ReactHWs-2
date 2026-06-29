@@ -22,8 +22,9 @@ export default function useFetch(url, options = {}) {
 
   useEffect(() => {
     let cancelled = false;
-    const method = options.method || "GET";
-    const payload = options.body ?? null;
+    const parsedOptions = JSON.parse(optionsKey);
+    const method = parsedOptions.method || "GET";
+    const payload = parsedOptions.body ?? null;
 
     console.log(
       "[useFetch] -> " + method + " " + url,
@@ -32,7 +33,7 @@ export default function useFetch(url, options = {}) {
     setLoading(true);
     setError(null);
 
-    fetch(url, options)
+    fetch(url, parsedOptions)
       .then(async (res) => {
         const json = await res.json().catch(() => null);
         if (cancelled) return;

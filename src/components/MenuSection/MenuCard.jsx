@@ -20,14 +20,16 @@ export default function MenuCard({ img, meal, price, addToCart }) {
           <input
             type="number"
             min={1}
+            value={quantity}
             onChange={(e) => setQuantity(Number(e.target.value))}
             className={styles.cardInput}
           />
           <Button
-            children={"Add to cart"}
             className={styles.cardButton}
             onClick={() => addToCart(quantity)}
-          />
+          >
+            Add to cart
+          </Button>
         </div>
       </div>
     </div>

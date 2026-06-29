@@ -64,11 +64,11 @@ footer {
   color: #546285;
 }
 
-span {
+.footerAccent {
   color: #35b8be;
 }
 
-a {
+.footerLink {
   text-decoration: none;
   color: #546285;
 }
